@@ -1,9 +1,14 @@
 import { KEY } from './config.js';
 
-const showMetricButton = document.getElementById('show-metric-button');
+const searchSection = document.getElementById('search-section');
 const searchForm = document.getElementById('search-form');
 const cityInput = document.getElementById('city-input');
+const resultSection = document.getElementById('result-section');
+const backToSearchButton = document.getElementById('back-to-search-button');
 const cityList = document.getElementById('result-list');
+const weatherSection = document.getElementById('weather-section');
+const backToResultButton = document.getElementById('back-to-result-button');
+const showMetricButton = document.getElementById('show-metric-button');
 const citySpan = document.getElementById('city');
 const conditions = document.getElementById('conditions');
 const temperature = document.getElementById('temperature');
@@ -93,6 +98,8 @@ const renderCities = () => {
         precipitation: weatherData.rain ? weatherData.rain['1h'] : 'None',
       };
       renderWeather();
+      resultSection.classList.add('hidden');
+      weatherSection.classList.remove('hidden');
     });
     getWeatherButton.textContent = 'Get Weather';
     const listItem = document.createElement('li');
@@ -127,4 +134,16 @@ searchForm.addEventListener('submit', async (e) => {
 
   cityInput.value = '';
   renderCities();
+  searchSection.classList.add('hidden');
+  resultSection.classList.remove('hidden');
+});
+
+backToSearchButton.addEventListener('click', () => {
+  resultSection.classList.add('hidden');
+  searchSection.classList.remove('hidden');
+});
+
+backToResultButton.addEventListener('click', () => {
+  weatherSection.classList.add('hidden');
+  resultSection.classList.remove('hidden');
 });
