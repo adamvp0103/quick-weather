@@ -1,3 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: hsl(197, 71%, 37%);
+}
+
+header {
+  width: 100%;
+  padding: 1rem 0;
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+
+.accent-text {
+  color: skyblue;
+}
+
+.subtitle {
+  font-style: italic;
+  color: skyblue;
+}
+
+.subtitle a {
+  color: white;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 640px;
+  padding: 1rem;
+  background-color: skyblue;
+}
+
 .hidden {
   display: none;
+}
+
+.section-title {
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+}
+
+form input,
+li span {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  border: none;
+  border-radius: 1rem 0 0 1rem;
+  padding-left: 2rem;
+  background-color: white;
+}
+
+.end-button {
+  border: none;
+  border-radius: 0 1rem 1rem 0;
+  padding: 1rem 2rem;
+  background-color: hsl(197, 71%, 37%);
+  color: white;
+  cursor: pointer;
+}
+
+.end-button:hover {
+  background-color: black;
+}
+
+.standalone-button {
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  background-color: hsl(197, 71%, 37%);
+  color: white;
+  cursor: pointer;
+}
+
+.standalone-button:hover {
+  background-color: black;
+}
+
+li {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+table {
+  width: 100%;
+}
+
+tr {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+th {
+  flex: 1;
+  border-radius: 1rem 0 0 1rem;
+  padding: 1rem 2rem;
+  background-color: hsl(197, 71%, 37%);
+  font-weight: normal;
+  color: white;
+}
+
+td {
+  display: flex;
+  align-items: center;
+  flex: 3;
+  border-radius: 0 1rem 1rem 0;
+  padding-left: 2rem;
+  background-color: white;
 }

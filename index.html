@@ -8,7 +8,7 @@
   </head>
   <body>
     <header>
-      <h1>Quick Weather</h1>
+      <h1>Quick <span class="accent-text">Weather</span></h1>
       <span class="subtitle"
         >powered by <a href="openweathermap.org">OpenWeatherMap</a></span
       >
@@ -16,23 +16,27 @@
 
     <main>
       <section id="search-section">
-        <h2>Search for a city</h2>
+        <h2 class="section-title">Search for a city</h2>
         <form id="search-form">
           <input id="city-input" placeholder="e.g. New York" required />
-          <button type="submit">Search</button>
+          <button class="end-button" type="submit">Search</button>
         </form>
       </section>
-
       <section id="result-section" class="hidden">
-        <button id="back-to-search-button">Back</button>
-        <h2>Select a result</h2>
+        <button id="back-to-search-button" class="standalone-button">
+          Back
+        </button>
+        <h2 class="section-title">Select a result</h2>
         <ul id="result-list"></ul>
       </section>
-
       <section id="weather-section" class="hidden">
-        <button id="back-to-result-button">Back</button>
-        <h2>Weather for <span id="city"></span></h2>
-        <button id="show-metric-button">Show Metric</button>
+        <button id="back-to-result-button" class="standalone-button">
+          Back
+        </button>
+        <h2 class="section-title">Weather for <span id="city"></span></h2>
+        <button id="show-metric-button" class="standalone-button">
+          Show Metric
+        </button>
         <table>
           <tr>
             <th>Conditions</th>

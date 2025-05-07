@@ -83,6 +83,7 @@ const renderCities = () => {
     const citySpan = document.createElement('span');
     citySpan.textContent = city.city;
     const getWeatherButton = document.createElement('button');
+    getWeatherButton.classList.add('end-button');
     getWeatherButton.addEventListener('click', async () => {
       const weatherData = await getWeather(city.lat, city.lon);
       weather = {
