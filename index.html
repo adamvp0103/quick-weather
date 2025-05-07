@@ -19,8 +19,8 @@
 
       <section>
         <h2>Search for a city</h2>
-        <form>
-          <input placeholder="e.g. New York" required />
+        <form id="search-form">
+          <input id="city-input" placeholder="e.g. New York" required />
           <button type="submit">Search</button>
         </form>
       </section>
@@ -62,11 +62,13 @@
             <td id="wind"></td>
           </tr>
           <tr>
-            <th>Rainfall</th>
+            <th>Precipitation</th>
             <td id="rainfall"></td>
           </tr>
         </table>
       </section>
     </main>
+
+    <script type="module" src="./script.js"></script>
   </body>
 </html>
