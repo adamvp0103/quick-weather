@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick Weather</title>
+  </head>
+  <body>
+    <header>
+      <h1>Quick Weather</h1>
+      <span class="subtitle"
+        >powered by <a href="openweathermap.org">OpenWeatherMap</a></span
+      >
+    </header>
+
+    <main>
+      <button>Imperial</button>
+      <button>Metric</button>
+
+      <section>
+        <h2>Search for a city</h2>
+        <form>
+          <input placeholder="e.g. New York" required />
+          <button type="submit">Search</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Select a result</h2>
+        <ul id="result-list"></ul>
+      </section>
+
+      <section>
+        <h2>Weather for <span id="city"></span></h2>
+        <table>
+          <tr>
+            <th>Conditions</th>
+            <td id="conditions"></td>
+          </tr>
+          <tr>
+            <th>Temperature</th>
+            <td id="temperature"></td>
+          </tr>
+          <tr>
+            <th>Feels Like</th>
+            <td id="feels-like"></td>
+          </tr>
+          <tr>
+            <th>Pressure</th>
+            <td id="pressure"></td>
+          </tr>
+          <tr>
+            <th>Humidity</th>
+            <td id="humidity"></td>
+          </tr>
+          <tr>
+            <th>Visibility</th>
+            <td id="visibility"></td>
+          </tr>
+          <tr>
+            <th>Wind</th>
+            <td id="wind"></td>
+          </tr>
+          <tr>
+            <th>Rainfall</th>
+            <td id="rainfall"></td>
+          </tr>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>
