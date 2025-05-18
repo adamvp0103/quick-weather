@@ -1,5 +1,6 @@
 import { KEY } from './config.js';
 
+// DOM elements
 const searchSection = document.getElementById('search-section');
 const searchForm = document.getElementById('search-form');
 const cityInput = document.getElementById('city-input');
@@ -19,10 +20,11 @@ const visibility = document.getElementById('visibility');
 const wind = document.getElementById('wind');
 const precipitation = document.getElementById('precipitation');
 
-let metric = false;
+let metric = false; // For switching between imperial and metric units
 let cities = [];
 let weather = null;
 
+// Get a list of cities from the user's query
 const getCities = async (name) => {
   const url = `http://api.openweathermap.org/geo/1.0/direct?q=${name}&limit=5&appid=${KEY}`;
 
@@ -36,6 +38,7 @@ const getCities = async (name) => {
   }
 };
 
+// Get the current weather data at the specified coordinates
 const getWeather = async (lat, lon) => {
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${KEY}&units=imperial`;
 
@@ -49,6 +52,7 @@ const getWeather = async (lat, lon) => {
   }
 };
 
+// Populate the table with weather data
 const renderWeather = () => {
   citySpan.textContent = weather.city;
   conditions.textContent = weather.conditions;
@@ -71,6 +75,7 @@ const renderWeather = () => {
   }`;
 };
 
+// Display the list of city results after searching
 const renderCities = () => {
   if (!cities.length) {
     cityList.innerHTML = '<i>No results</i>';
@@ -139,11 +144,13 @@ searchForm.addEventListener('submit', async (e) => {
   resultSection.classList.remove('hidden');
 });
 
+// Go back to search page from results page
 backToSearchButton.addEventListener('click', () => {
   resultSection.classList.add('hidden');
   searchSection.classList.remove('hidden');
 });
 
+// Go back to results page from weather page
 backToResultButton.addEventListener('click', () => {
   weatherSection.classList.add('hidden');
   resultSection.classList.remove('hidden');
