@@ -1,4 +1,4 @@
-import { KEY } from './config.js';
+const KEY = 'e3a169d625db34eb4de9076f40944369';
 
 // DOM elements
 const searchSection = document.getElementById('search-section');
