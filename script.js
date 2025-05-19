@@ -126,12 +126,15 @@ searchForm.addEventListener('submit', async (e) => {
 
   const query = cityInput.value.trim();
 
+  console.log('QUERY', query);
+
   if (!query) {
     alert('Query cannot be blank.');
     return;
   }
 
   const cityData = await getCities(query);
+  console.log('CITY DATA', cityData);
   cities = cityData.map((c) => ({
     city: `${c.name}${c.state ? `, ${c.state}` : ''}`,
     lat: c.lat,
