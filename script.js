@@ -26,7 +26,7 @@ let weather = null;
 
 // Get a list of cities from the user's query
 const getCities = async (name) => {
-  const url = `http://api.openweathermap.org/geo/1.0/direct?q=${name}&limit=5&appid=${KEY}`;
+  const url = `https://api.openweathermap.org/geo/1.0/direct?q=${name}&limit=5&appid=${KEY}`;
 
   try {
     const response = await fetch(url);
